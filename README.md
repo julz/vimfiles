@@ -29,6 +29,12 @@ It will also install `golang`'s tools if you have golang on your `$PATH`.
 
 Be sure to always edit the vimrc using `,vi`, which opens the vimrc in the .vim folder. Vim has a nasty habit of overriding symlinks.
 
+```
+" will save automatically when exiting the buffer
+" 0 or 1, defaults 0
+let g:autosave = 1
+```
+
 ## Plugin Installation / Requirements
 
 I may make this more verbose later, but for now, here's a list of plugins that require further installation:
