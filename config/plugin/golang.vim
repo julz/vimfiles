@@ -46,3 +46,9 @@ if exists("g:disable_gotags_on_save") && g:disable_gotags_on_save
   augroup END
 endif
 
+:autocmd FileType go nmap <buffer> GD <Plug>(go-def-vertical)
+:autocmd FileType go nmap <buffer> G? <Plug>(go-doc-browser)
+:autocmd FileType go nmap <buffer> GV <Plug>(go-vet)
+:autocmd FileType go nmap <buffer> GL <Plug>(go-lint)
+:autocmd FileType go nmap <buffer> GC <Plug>(go-coverage)
+

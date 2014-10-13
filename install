@@ -29,6 +29,8 @@ done
 if which go; then
   gopackages="code.google.com/p/go.tools/cmd/godoc \
      code.google.com/p/go.tools/cmd/vet \
+     code.google.com/p/go.tools/cmd/cover \
+     code.google.com/p/go.tools/cmd/godoc \
      code.google.com/p/go.tools/cmd/goimports \
      code.google.com/p/rog-go/exp/cmd/godef \
      github.com/golang/lint/golint \
