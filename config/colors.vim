@@ -1,9 +1,9 @@
-let &t_Co=256
+"let &t_Co=256
 
-let g:base16_shell_path=$HOME.'/.vim/scripts/base16-shell'
+"let g:base16_shell_path=$HOME.'/.vim/scripts/base16-shell'
 
 let s:colors = [
-      \ 'hybrid',
+      \ 'base16-monokai',
       \ 'base16-3024',
       \ 'base16-apathy',
       \ 'base16-ashes',
@@ -30,7 +30,6 @@ let s:colors = [
       \ 'base16-londontube',
       \ 'base16-marrakesh',
       \ 'base16-mocha',
-      \ 'base16-monokai',
       \ 'base16-ocean',
       \ 'base16-paraiso',
       \ 'base16-pop',
@@ -40,6 +39,7 @@ let s:colors = [
       \ 'base16-summerfruit',
       \ 'base16-tomorrow',
       \ 'base16-twilight',
+      \ 'hybrid',
       \ ]
 
 function! colors#_change(index)

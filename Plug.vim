@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged')
   " Colors {{{
     Plug 'dolio/vim-hybrid'
     Plug 'chriskempson/base16-vim'
+    Plug 'jonathanfilip/vim-lucius'
   " }}}
 
   Plug 'luochen1990/rainbow'
@@ -66,11 +67,25 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-unimpaired'
   Plug 'Townk/vim-autoclose', { 'on': 'AutoCloseOn' }
 
-  if !(has('lua') && (v:version > 703 || v:version == 703 && has('patch885')))
-    Plug 'Shougo/neocomplcache.vim'
-  else
-    Plug 'Shougo/neocomplete.vim'
+
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.sh
   endif
+endfunction
+
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+
+  " if !(has('lua') && (v:version > 703 || v:version == 703 && has('patch885')))
+  "   Plug 'Shougo/neocomplcache.vim'
+  " else
+  "   Plug 'Shougo/neocomplete.vim'
+  " endif
+
   Plug 'Shougo/echodoc.vim'
 " }}}
 
@@ -82,8 +97,8 @@ call plug#begin('~/.vim/plugged')
 " }}}
 
 " Snippets {{{
-  Plug 'Shougo/neosnippet.vim'
-  Plug 'Shougo/neosnippet-snippets'
+  " Plug 'Shougo/neosnippet.vim'
+  " Plug 'Shougo/neosnippet-snippets'
 " }}}
 
 " Language specific {{{
